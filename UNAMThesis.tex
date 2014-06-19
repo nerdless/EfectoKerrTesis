@@ -1,0 +1,190 @@
+\documentclass[11pt,spanish]{report}
+%\usepackage[square]{natbib}
+\usepackage[spanish,mexico]{babel}
+\usepackage{UNAMThesisIng}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=blue, filecolor=urlcolor]{hyperref}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pst-circ}
+\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\usepackage{color}
+\usepackage[all]{xy}
+\usepackage{pst-optexp}
+\usepackage{longtable, fancyhdr}
+
+\logounam{Escudo-UNAM}
+\logoinstitute{Escudo-IBT}
+\pagenumbering{roman}
+\flushbottom
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\newcommand{\Cv}{\ensuremath{C_{V}}}
+\newcommand{\gc}{^{\circ}\text{C}}
+\newcommand{\cm}{\text{ cm}}
+\newcommand{\invg}{\frac{1}{^{\circ}}}
+\newcommand{\D}{\Delta}
+\renewcommand{\d}{\delta}
+\newcommand{\parc}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+\newcommand{\m}{\text{ m}}
+\newcommand{\atm}{\text{ atm}}
+\newcommand{\K}{\text{K}}
+\newcommand{\lt}{\text{lt}}
+\newcommand{\mol}{\text{ mol}}
+\newcommand{\gr}{\text{ gr}}
+\newcommand{\kg}{\text{ kg}}
+\newcommand{\pua}{\text{ \underline{P}}}
+\newcommand{\nt}{\text{Nt}}
+\newcommand{\sen}{\text{Sen}}
+\renewcommand{\H}{\text{H}}
+\renewcommand{\cos}{\text{Cos }}
+\newcommand{\cte}{\text{cte}}
+\newcommand{\J}{\text{ J}}
+
+\hypersetup{pdftitle={Implementaci\'on de la t\'ecnica de detecci\'on Heterodina \'Optica por Efecto Kerr \'Optico (OHD-OKE) para el estudio de din\'amica ultrarr\'apida en l\'iquidos}, pdfauthor={Jos\'e Eduardo Ochoa Morales}, pdfsubject={F\'isico-Qu\'imica}, pdfkeywords={Espectrocop\'ia Ultrar\'apida, Femtosegundos, l\'iquidos moleculares}, pdfcreator={TeXnicCenter}, pdfproducer={MikteX}, baseurl={}}
+
+\begin{document}
+
+\title{Implementaci\'on de la t\'ecnica de detecci\'on Heterodina \'Optica por Efecto Kerr \'Optico (OHD-OKE) para el estudio de din\'amica ultrarr\'apida en l\'iquidos}
+\author{Jos\'e Eduardo Ochoa Morales}
+\prevdegrees{F\'isico, Universidad Nacional Aut\'onoma de M\'exico (2012)}
+\institute{Programa de Maestr\'ia y Doctorado en Ingenier\'ia}
+\department{Ingenier\'ia El\'ectrica - Instrumentaci\'on Cient\'ifica}
+\degree{Maestro en Ingeniería}
+\supervisor{Dr. Jes\'us Gardu\~no Mej\'ia}
+\supervisorinst{CCADET-UNAM}
+\city{M\'exico, Distrito Federal}
+\degreemonth{Mes de Titulación}
+\degreeyear{2014}
+%Jurado
+\presidente{presidente}
+\secretario{secre}
+\vocal{vocal}
+\suplenuno{sup1}
+\suplendos{sup2}
+\lugar{Ciudad Universitaria, UNAM}
+
+
+\maketitle
+
+\begin{dedication}
+A pesar de la distancia y del\\
+tiempo ido, s\'{o}lo puedo dedicar:\\
+A todos y ninguno...\\
+\textsc{Julio A. Freyre-Gonz\'{a}lez}
+\end{dedication}
+
+\begin{acknowledgements}
+Gracias a cada una de las personas que me apoyaron e hicieron que
+este sue\~{n}o se cristalizara en una hermosa realidad.
+\end{acknowledgements}
+
+\tableofcontents
+\clearpage
+
+
+
+%\begin{foreword}
+%Redacte aqu\'{\i} el pr\'{o}logo contando la historia detr\'{a}s de su
+%trabajo.
+%\end{foreword}
+
+\begin{resumen}
+Aqu\'{\i} se redacta el resumen en espa\~{n}ol.
+\end{resumen}
+
+\begin{abstract}
+Here goes the english abstract.
+\end{abstract}
+
+\pagenumbering{arabic}
+
+%\part{The First Part}
+
+\chapter{Introducci\'on}
+
+\input{cap1}
+
+\chapter{Teor\'ia y M\'etodo experimental}
+\input{cap2}
+
+\appendix 
+
+\chapter{Medida del ancho de espot y cintura}
+\section{Medida del spot de bombeo y prueba y su separaci\'on}
+Para realizar la medida del tama\~no del espot utilic\'e el m\'etodo de la navaja \cite{rober} el cual consiste en bloquear el haz con una navaja en direcci\'on transversal a la propagaci\'on de la luz y obtener la intensidad despu\'es de la navaja como funci\'on de la distancia de penetraci\'on de la navaja 
+
+
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.14)(3.08,2.14)
+\psbezier[linewidth=0.04](1.0,2.0)(1.0,1.25)(2.0,1.25)(2.0,2.0)
+\psline[linewidth=0.04cm](0.0,2.0)(1.0,2.0)
+\psline[linewidth=0.04cm](2.0,2.0)(3.0,2.0)
+\psline[linewidth=0.04cm](3.0,2.0)(3.0,-2.0)
+\psline[linewidth=0.04cm](3.0,-2.0)(2.0,-2.0)
+\psbezier[linewidth=0.04](1.0,-2.0)(1.0,-1.25)(2.0,-1.25)(2.0,-2.0)
+\psline[linewidth=0.04cm](0.0,2.0)(0.0,-2.0)
+\psline[linewidth=0.04cm](0.0,-2.0)(1.0,-2.0)
+\end{pspicture} 
+}
+
+\begin{pspicture}(5,4)
+\psset{fillstyle=gradient,linestyle=none}
+\pscircle[GradientCircle=true](5,1){1}%
+\psframe[GradientCircle=true,GradientScale=3](0,1.5)(5,2.5)%
+\psframe[GradientCircle=true,GradientScale=2,GradientPos={(4,3.5)}](0,3)(5,4)%
+\end{pspicture}
+
+\begin{pspicture}(6,4)
+\psgrid
+\psset{fillstyle=gradient,linestyle=none, gradend=red, gradbegin=white}
+\psframe[gradmidpoint=0](0,1.5)(6,2.5)
+\psframe[gradmidpoint=0.5](3,0)(6,1)
+\psframe[gradmidpoint=1](0,0.5)(3,1)
+\end{pspicture}
+
+\begin{pspicture}(0,-1)(4,2)
+\psgrid
+\pnodes(0,1.5){A}(2,1.5){B}(2.8,0){C}
+\mirror[mirrorwidth=1.2, mirrortype=extended](A)(B)(C)
+\addtopsstyle{Beam}{%
+fillstyle=solid, fillcolor=green, opacity=0.3}
+\drawwidebeam[beamwidth=0.5](A){}
+\drawwidebeam[loadbeam]{}(C)
+\end{pspicture}
+
+%\let\clearpage\relax
+\begin{thebibliography}{2}
+\bibitem{rober} \textsc{R. D\'iaz-Uribe, M. Rosete-Aguilar} y \textsc{R. Ortega-Mart\'inez},
+\textit{Position sensing of a Gaussian beam with a power meter and a knife edge}, Rev. Mex. F\'is. {\bf 39}, 484–492 (1992).
+\end{thebibliography}
+
+
+%\bibliographystyle{UNAMThesis}
+%\bibliography{testBib}
+\end{document}

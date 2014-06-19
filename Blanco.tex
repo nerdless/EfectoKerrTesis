@@ -1,0 +1,78 @@
+\documentclass[11pt,spanish]{report}
+%\usepackage[square]{natbib}
+\usepackage[spanish,mexico]{babel}
+\usepackage{UNAMThesisIng}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[colorlinks,linkcolor=black,citecolor=black,urlcolor=blue, filecolor=urlcolor]{hyperref}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{pst-circ}
+\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\usepackage{color}
+\usepackage[all]{xy}
+\usepackage{pst-optexp}
+\usepackage{longtable, fancyhdr}
+
+\logounam{Escudo-UNAM}
+\logoinstitute{Escudo-IBT}
+\pagenumbering{roman}
+\flushbottom
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+\newcommand{\Cv}{\ensuremath{C_{V}}}
+\newcommand{\gc}{^{\circ}\text{C}}
+\newcommand{\cm}{\text{ cm}}
+\newcommand{\invg}{\frac{1}{^{\circ}}}
+\newcommand{\D}{\Delta}
+\renewcommand{\d}{\delta}
+\newcommand{\parc}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+\newcommand{\m}{\text{ m}}
+\newcommand{\atm}{\text{ atm}}
+\newcommand{\K}{\text{K}}
+\newcommand{\lt}{\text{lt}}
+\newcommand{\mol}{\text{ mol}}
+\newcommand{\gr}{\text{ gr}}
+\newcommand{\kg}{\text{ kg}}
+\newcommand{\pua}{\text{ \underline{P}}}
+\newcommand{\nt}{\text{Nt}}
+\newcommand{\sen}{\text{Sen}}
+\renewcommand{\H}{\text{H}}
+\renewcommand{\cos}{\text{Cos }}
+\newcommand{\cte}{\text{cte}}
+\newcommand{\J}{\text{ J}}
+
+\hypersetup{pdftitle={Implementaci\'on de la t\'ecnica de detecci\'on Heterodina \'Optica por Efecto Kerr \'Optico (OHD-OKE) para el estudio de din\'amica ultrarr\'apida en l\'iquidos}, pdfauthor={Jos\'e Eduardo Ochoa Morales}, pdfsubject={F\'isico-Qu\'imica}, pdfkeywords={Espectrocop\'ia Ultrar\'apida, Femtosegundos, l\'iquidos moleculares}, pdfcreator={TeXnicCenter}, pdfproducer={MikteX}, baseurl={}}
+
+\begin{document}
+
+
+La Detección Heterodina Óptica por Efecto Kerr Óptico (OHD-OKE) es una técnica relativamente simple, no destructiva y no invasiva con excelente relación señal-ruido y alta resolución temporal aplicada en muestras en fase líquida. En esta un pulso óptico linealmente polarizado interacciona con la muestra que presenta un estado isotrópico inicial para posteriormente después de la perturbación induce una birrefringencia transitoria. Un segundo pulso, retrasado en tiempo incidiendo en el mismo punto en la muestra, con su plano de polarización orientado a cierto ángulo respecto al primero, experimentará un cambio de polarización debido a la birrefringencia inducida en el medio y emergerá con cierto grado de polarización elíptica. Con un polarizador cruzado con el plano de polarización del segundo pulso es colocado frente a un detector. La birrefringencia transitoria inducida en la muestra provocará que cierta fracción de la prueba llegue el detector. Esto es lo que se conoce como señal OKE resuelta en tiempo ya que la relajación de la birrefringencia es monitoriada en función del tiempo relativo de retardo entre el bombeo y la prueba.
+ El cambio de birrefringencia medida se puede relacionar directamente con el movimiento molecular microscópico (movimiento libracional, rotacional y difusivo principalmente). 
+Debido a que los movimientos moleculares y rotacinales en líquidos son procesos ultrarápidos (con una duración temporal de 10-15 segundos) es preciso utilizar un láser de Ti:zaf de pulsos ultracortos.
+En el presente trabajo, además de la instrumentación de la técnica, se medirán los tiempos de relajación de una muestra de CS2 tanto en detección homodina como heterodina.
+
+\end{document}
